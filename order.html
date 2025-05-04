@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT servises</title>
+    <link rel="stylesheet" href="order.css">
+</head>
+<body>
+    <header> 
+        <div class = "logo"> IT services</div>
+        <nav> 
+            <ul>
+                <li> <a href="index.html" class = "active"> Головна  </a></li>
+                <li> <a href="services.html" > Послуги  </a></li>
+                <li> <a href="order.html" > Замовити  </a></li>
+                <li> <a href="contact.html" > Контакти  </a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <p>Будь ласка, заповніть форму нижче, і ми зв'яжемося з вами найближчим часом:</p>
+
+        <form>
+            <label for="name">Ім'я:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="service">Оберіть послугу:</label><br>
+            <select id="service" name="service">
+                <option value="web">Розробка сайтів</option>
+                <option value="servers">Підтримка серверів</option>
+                <option value="security">Кібербезпека</option>
+            </select><br><br>
+
+            <label for="message">Коментар:</label><br>
+            <textarea id="message" name="message" rows="4" cols="40"></textarea><br><br>
+
+            <button type="submit">Надіслати</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Інтернет IT Послуги</p>
+    </footer>
+</body>
+</html>
