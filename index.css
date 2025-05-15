@@ -6,26 +6,98 @@ body {
 }
 
 header {
-    background-color: #002b5c;
+    background: linear-gradient(135deg, #002b5c 0%, #004a8f 100%);
     color: white;
-    padding: 20px;
-    text-align: center;
+    padding: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-nav {
-    margin-top: 10px;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: linear-gradient(to right, #00bfff, #ffffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 nav a {
-    margin: 0 15px;
-    color: #00bfff;
+    color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
 nav a:hover {
-    text-decoration: underline;
-    color: #ffffff;
+    color: white;
+    background-color: rgba(0, 191, 255, 0.2);
+}
+
+nav a.active {
+    color: white !important; /* Важливо, щоб перебити hover */
+    background-color: rgba(0, 191, 255, 0.3) !important;
+}
+
+nav a.active:hover {
+    background-color: rgba(0, 191, 255, 0.4) !important; /* Трохи темніше при наведенні */
+}
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #00bfff;
+    transition: all 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 70%;
+    left: 15%;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .logo {
+        margin-bottom: 15px;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
 }
 
 main {
